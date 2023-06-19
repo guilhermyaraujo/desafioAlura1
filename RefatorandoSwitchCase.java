@@ -1,8 +1,6 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class refatorandoSwitchCase {
+public class RefatorandoSwitchCase {
     public static void main(String[] args) {
         String nome = "Guilhermy Araujo";
         String tipoConta = "Corrente";
@@ -12,7 +10,7 @@ public class refatorandoSwitchCase {
         System.out.println("\n***********************************");
         System.out.println("Nome do cliente: " + nome);
         System.out.println("Tipo da conta: " + tipoConta);
-        System.out.println("Saldo autal: R$" + saldo);
+        System.out.println("Saldo atual: R$" + saldo);
         System.out.println("***********************************");
 
         String menu = """
@@ -45,12 +43,13 @@ public class refatorandoSwitchCase {
                 case 3:
                     System.out.println("Qual valor recebido? ");
                     double valorRecebido = leitura.nextDouble();
-                    saldo = valorRecebido + saldo;
+                    saldo += valorRecebido;
                     System.out.println("O saldo atual é: R$" + saldo);
                     break;
                 case 4:
+                    System.out.println("Saldo atual: R$" + saldo);
                     System.out.println("O JavaBanking agradece.");
-                    System.out.println(".....logout efetuado com sucesso.");
+                    System.out.println("Logout efetuado com sucesso.");
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente");
